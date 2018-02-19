@@ -392,12 +392,13 @@ REQUIREMENT
     files as well as under Windows platform.
 
 INSTALLATION
+  LINUX:
     Download the tarball from GitHub and unpack the archive as follow:
 
-            tar xzf pgbadger-7.x.tar.gz
-            cd pgbadger-7.x/
-            perl Makefile.PL
-            make && sudo make install
+	    tar xzf pgbadger-7.x.tar.gz
+	    cd pgbadger-7.x/
+	    perl Makefile.PL
+	    make && sudo make install
 
     This will copy the Perl script pgbadger to /usr/local/bin/pgbadger by
     default and the man page into /usr/local/share/man/man1/pgbadger.1.
@@ -410,10 +411,16 @@ INSTALLATION
     For example, to install everything just like Debian does, proceed as
     follows:
 
-            perl Makefile.PL INSTALLDIRS=vendor
+	    perl Makefile.PL INSTALLDIRS=vendor
 
     By default INSTALLDIRS is set to site.
-
+    
+  WINDOWS:
+    Install [PERL for Windows](https://www.activestate.com/activeperl/downloads)
+    Download [pgbadger source](https://github.com/dalibo/pgbadger/releases) in zip format and extract into any folder
+    After proceed "POSTGRES CONFIGURATION" (bellow), make a pgpadger report using a following command from pgbadger folder:
+ 	`\pgbadger-x.x>perl pgbadger ...\pg_log\a_postgresql_log.log`
+    
 POSTGRESQL CONFIGURATION
     You must enable and set some configuration directives in your
     postgresql.conf before starting.
